@@ -7,6 +7,14 @@ use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
 
 class Kernel extends ConsoleKernel
 {
+
+    /**
+     * Defines the name used to call the commands from the terminal
+     */
+    protected $commands = [
+        Commands\CacheApi::class
+    ];
+    
     /**
      * Define the application's command schedule.
      *

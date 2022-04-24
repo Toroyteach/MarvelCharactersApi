@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\IndexController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +17,10 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+//shows users form to upload the csv file
+Route::get('/uploadFile', [IndexController::class, 'upload'])->name('upload.csv'); //loads view
+Route::post('/upload', [IndexController::class, 'uploadCsvFile'])->name('upload'); //uploads file
+
+//loads the characters to the home page
+Route::get('/characters', [IndexController::class, 'characters'])->name('characters'); //loads characters
