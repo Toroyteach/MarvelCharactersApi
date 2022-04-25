@@ -32,7 +32,7 @@ class IndexController extends Controller
 
         $data   =   file($request->csvFile);
         // Chunking file
-        $chunks = array_chunk($data, 10000);
+        $chunks = array_chunk($data, 5000);
 
         $header = [];
 

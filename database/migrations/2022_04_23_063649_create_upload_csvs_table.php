@@ -15,14 +15,14 @@ class CreateUploadCsvsTable extends Migration
     {
         Schema::create('upload_csv', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->integer('invoice_no');
-            $table->string('stock_code');
+            $table->string('invoice_no')->nullable();
+            $table->string('stock_code')->nullable();
             $table->string('description')->nullable();
-            $table->integer('quantity');
-            $table->date('invoice_date');
-            $table->double('unit_price', 15, 2);
-            $table->integer('customer_id');
-            $table->string('country');
+            $table->integer('quantity')->nullable();
+            $table->string('invoice_date')->nullable();
+            $table->double('unit_price', 15, 2)->nullable();
+            $table->string('customer_id')->nullable();
+            $table->string('country')->nullable();
             $table->timestamps();
         });
     }

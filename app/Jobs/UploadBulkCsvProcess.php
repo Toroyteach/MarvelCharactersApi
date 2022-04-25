@@ -46,7 +46,7 @@ class UploadBulkCsvProcess implements ShouldQueue
                 'stock_code' => $saleData['stock_code'],
                 'description' => $saleData['description'],
                 'quantity' => $saleData['quantity'],
-                'invoice_date' => Carbon::parse($saleData['invoice_date']),
+                'invoice_date' => $saleData['invoice_date'],
                 'unit_price' => $saleData['unit_price'],
                 'customer_id' => $saleData['customer_id'],
                 'country' => $saleData['country'],
